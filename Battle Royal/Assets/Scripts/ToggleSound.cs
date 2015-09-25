@@ -9,17 +9,16 @@ public class ToggleSound : MonoBehaviour {
     {
         sound = !sound;
 
-        // TODO
-        // Still haven't figured out how to change the right
-        // text object.
         Text text = gameObject.GetComponentInChildren<Text>();
         if(sound)
         {
             text.text = "Sound: On";
+			BackgroundMusic.Instance.gameObject.SetActive(true);
         }
         else
         {
             text.text = "Sound: Off";
+			BackgroundMusic.Instance.gameObject.SetActive(false);
         }
     }
 }
