@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Battle Royal/Assets/Prefabs 1.meta
 guid: f280bbd1deb8f8c4daad2650a42b171e
 folderAsset: yes
 timeCreated: 1443212444
+=======
+guid: ab32907ceee34ce47a04523814c00903
+folderAsset: yes
+timeCreated: 1443208994
+>>>>>>> 694c715b32e715c85a992e56eca4d2ebccf39388:Battle Royal/Assets/Art.meta
 licenseType: Free
 DefaultImporter:
   userData: 
