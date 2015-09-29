@@ -22,7 +22,7 @@ public class ServerListing : MonoBehaviour {
 		testData.AddFirst (new ServerSettings ("Doe", 21, 24, ""));
 		testData.AddFirst (new ServerSettings ("Bleh", 27, 30, "password"));
 
-		UpdateListing(testData);
+		//UpdateListing(testData);
 	}
 
 	void UpdateListing(LinkedList<ServerSettings> serverData) {
@@ -40,8 +40,9 @@ public class ServerListing : MonoBehaviour {
 			hostData.name = "hostText" + (i + 1);
 			RectTransform hostTrans = hostData.GetComponent<RectTransform>();
 
-			hostTrans.SetParent(serversPanelTrans, false);
-			hostTrans.localPosition = new Vector3(hostTrans.localPosition.x, startHeight);
+			//hostTrans.SetParent(serversPanelTrans, true);
+			hostTrans.parent = serversPanelTrans;
+			hostTrans.localPosition = new Vector3(hostTrans.localPosition.x, 200, 1);
 			hostTrans.GetComponent<Text>().text = data.Host;
 
 			// Adds the host object to the list
@@ -70,8 +71,8 @@ public class ServerListing : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update() {
 		serversPanelTrans.sizeDelta = new Vector2(Screen.width, Screen.height - 130); // Account for title
-
+		UpdateListing(testData);
 	}
 }
