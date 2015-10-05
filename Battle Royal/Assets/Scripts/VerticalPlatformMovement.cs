@@ -15,8 +15,6 @@ public class VerticalPlatformMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Vector3 up = new Vector3(0, (float)0.05, 0);
-        Vector3 down = new Vector3(0, (float)-0.05, 0);
        // Debug.Log(platformMovementSpeed);      
         if(top < 50)
         {

@@ -22,9 +22,6 @@ void Start()
 // Update is called once per frame
 void Update()
     {
-       
-        Vector3 up = new Vector3(0, (float)0.05, 0);
-        Vector3 down = new Vector3(0, (float)-0.05, 0);
         
         if (right < 50)
         {
@@ -69,4 +66,5 @@ void Update()
         }
 
     }
+    
 }
