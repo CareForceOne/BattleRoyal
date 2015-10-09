@@ -11,6 +11,7 @@ public class Player_Movement : NetworkBehaviour
     float dashCooldownTimer = 0.0f;
     public float DASHCOOLDOWN = 3.0f;
     public float JUMPCOOLDOWN = 0.5f;
+    bool facingRight = false;
 
     // Use this for initialization
     void Start()
@@ -19,6 +20,7 @@ public class Player_Movement : NetworkBehaviour
     }
 
     // Update is called once per frame
+    [Client]
     void Update()
     {
         if (!GetComponent<NetworkIdentity>().isLocalPlayer)   //Is this player my player?
@@ -40,7 +42,12 @@ public class Player_Movement : NetworkBehaviour
         }
         if (Input.GetButton("Horizontal"))
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(speed * Input.GetAxis("Horizontal"), GetComponent<Rigidbody2D>().velocity.y);
+            float axisInput = Input.GetAxis("Horizontal");
+            GetComponent<Rigidbody2D>().velocity = new Vector2(speed * axisInput, GetComponent<Rigidbody2D>().velocity.y);
+            if(axisInput > 0 && facingRight == false){
+                Cmdflip();
+                facingRight = true;
+            }
         }
     }
 
@@ -82,5 +89,9 @@ public class Player_Movement : NetworkBehaviour
         {
             speed = 5.00f;
         }
+    }
+    [Command]
+    void Cmdflip(){
+        transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
     }
 }
