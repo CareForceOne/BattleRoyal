@@ -13,6 +13,11 @@ public class Player_Movement : NetworkBehaviour
     public float JUMPCOOLDOWN = 0.5f;
     bool facingRight = false;
 
+	public delegate void flipDelegate();
+
+	[SyncEvent]
+	public event flipDelegate EventFlip;
+
     // Use this for initialization
     void Start()
     {
@@ -20,7 +25,6 @@ public class Player_Movement : NetworkBehaviour
     }
 
     // Update is called once per frame
-    [Client]
     void Update()
     {
         if (!GetComponent<NetworkIdentity>().isLocalPlayer)   //Is this player my player?
@@ -48,6 +52,10 @@ public class Player_Movement : NetworkBehaviour
                 Cmdflip();
                 facingRight = true;
             }
+			else if(axisInput < 0 && facingRight == true){
+				Cmdflip();
+				facingRight = false;
+			}
         }
     }
 
@@ -92,6 +100,7 @@ public class Player_Movement : NetworkBehaviour
     }
     [Command]
     void Cmdflip(){
-        transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
+        //transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
+		EventFlip();
     }
 }
