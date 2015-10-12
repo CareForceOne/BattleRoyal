@@ -9,4 +9,9 @@ public class ServerButton : MonoBehaviour {
     public Text Players;
     public Text hasPassword;
     public Text Ping;
+
+    public void joinServer()
+    {
+
+    }
 }
