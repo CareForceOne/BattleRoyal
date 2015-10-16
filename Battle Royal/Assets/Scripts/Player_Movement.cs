@@ -14,9 +14,13 @@ public class Player_Movement : NetworkBehaviour
     bool facingRight = false;
 
 	public delegate void flipDelegate();
+	public delegate void punchDelegate();
 
 	[SyncEvent]
 	public event flipDelegate EventFlip;
+
+	[SyncEvent]
+	public event punchDelegate EventPunch;
 
     // Use this for initialization
     void Start()
@@ -57,6 +61,11 @@ public class Player_Movement : NetworkBehaviour
 				facingRight = false;
 			}
         }
+		if (Input.GetButtonDown ("Punch")) {
+			//do a sick punch
+			Debug.Log ("FALCON PUNCH");
+			CmdPunch();
+		}
     }
 
     void OnCollisionStay2D(Collision2D theCollision)
@@ -103,4 +112,8 @@ public class Player_Movement : NetworkBehaviour
         //transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
 		EventFlip();
     }
+
+	void CmdPunch(){
+		EventPunch();
+	}
 }
