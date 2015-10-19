@@ -12,20 +12,19 @@ public class Player_Movement : NetworkBehaviour
     public float DASHCOOLDOWN = 3.0f;
     public float JUMPCOOLDOWN = 0.5f;
     bool facingRight = false;
+	private Animator animator;
+	private NetworkAnimator networkAnimator;
 
 	public delegate void flipDelegate();
-	public delegate void punchDelegate();
 
 	[SyncEvent]
 	public event flipDelegate EventFlip;
 
-	[SyncEvent]
-	public event punchDelegate EventPunch;
-
     // Use this for initialization
     void Start()
     {
-
+		animator = GetComponent<Animator>();
+		networkAnimator = GetComponent<NetworkAnimator>();
     }
 
     // Update is called once per frame
@@ -64,7 +63,8 @@ public class Player_Movement : NetworkBehaviour
 		if (Input.GetButtonDown ("Punch")) {
 			//do a sick punch
 			Debug.Log ("FALCON PUNCH");
-			CmdPunch();
+			animator.SetTrigger("punch");
+			//CmdPunch();
 		}
     }
 
@@ -77,9 +77,13 @@ public class Player_Movement : NetworkBehaviour
 
         if ((theCollision.gameObject.tag == "Floor" && GetComponent<Rigidbody2D>().velocity.y < 10) && (Input.GetKey(KeyCode.Space)))
         {
-            GetComponent<Rigidbody2D>().AddForce(Vector2.up * 450);
+			jump();
         }
     }
+
+	void jump(){
+		GetComponent<Rigidbody2D>().AddForce(Vector2.up * 450);
+	}
 
     void dash()
     {
@@ -114,6 +118,6 @@ public class Player_Movement : NetworkBehaviour
     }
 
 	void CmdPunch(){
-		EventPunch();
+
 	}
 }

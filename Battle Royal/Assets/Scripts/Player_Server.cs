@@ -9,7 +9,7 @@ public class Player_Server : NetworkBehaviour {
 	// Use this for initialization
 	void Start () {
 		//if (NetworkClient.active) {
-			//player.EventFlip += flip;
+			player.EventFlip += flip;
 			//player.EventPunch += punch;
 		//}
 	}
@@ -24,8 +24,8 @@ public class Player_Server : NetworkBehaviour {
 		transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
 	}
 
-	public void punch(){
+	//public void punch(){
 		//flip ();
-		transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
-	}
+		//transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
+	//}
 }
