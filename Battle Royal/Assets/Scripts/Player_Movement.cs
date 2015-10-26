@@ -20,9 +20,13 @@ public class Player_Movement : NetworkBehaviour
 	[SyncEvent]
 	public event flipDelegate EventFlip;
 
+	[SyncVar]
+	int health;
+
     // Use this for initialization
     void Start()
     {
+		health = 100;
 		animator = GetComponent<Animator>();
 		networkAnimator = GetComponent<NetworkAnimator>();
     }
@@ -64,7 +68,9 @@ public class Player_Movement : NetworkBehaviour
 			//do a sick punch
 			Debug.Log ("FALCON PUNCH");
 			animator.SetTrigger("punch");
-			//CmdPunch();
+
+
+			CmdPunch();
 		}
     }
 
@@ -117,7 +123,12 @@ public class Player_Movement : NetworkBehaviour
 		EventFlip();
     }
 
+	[Command]
 	void CmdPunch(){
+		GameObject hitBox = (GameObject)Instantiate(Resources.Load("Prefabs/Hitbox_Punch"), transform.position, transform.rotation);
 
+		hitBox.transform.parent = gameObject.transform;
+		Destroy(hitBox, 2.0f);
+		NetworkServer.Spawn(hitBox);
 	}
 }

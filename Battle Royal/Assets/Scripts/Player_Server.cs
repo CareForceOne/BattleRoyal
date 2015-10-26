@@ -21,7 +21,9 @@ public class Player_Server : NetworkBehaviour {
 	}
 
 	public void flip(){
-		transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
 	}
 
 	//public void punch(){
