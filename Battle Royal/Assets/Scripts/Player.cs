@@ -77,6 +77,11 @@ public class Player : NetworkBehaviour
 			CmdPunch();
 		}
 		if (Input.GetButtonDown ("Shoot")) {
+			if(! isServer){
+				GameObject arrow = (GameObject)Instantiate(Resources.Load("Prefabs/Arrow"), new Vector2((transform.position.x - (3 * transform.localScale.x / 10)), transform.position.y), transform.rotation);
+				Destroy (arrow, 2.0f);
+				arrow.GetComponent<Rigidbody2D>().AddForce(new Vector2(-(400 * transform.localScale.x),0));
+			}
 			CmdShoot();
 		}
     }
@@ -145,14 +150,17 @@ public class Player : NetworkBehaviour
 		GameObject hitBox = (GameObject)Instantiate(Resources.Load("Prefabs/Hitbox_Punch"), new Vector2((transform.position.x - (2 * transform.localScale.x / 10)), transform.position.y), transform.rotation);
 		hitBox.transform.parent = gameObject.transform;
 		Destroy(hitBox, 1.0f);
-		NetworkServer.Spawn(hitBox);
+		//NetworkServer.Spawn(hitBox);
 	}
 
 	[Command]
 	void CmdShoot(){
 		GameObject arrow = (GameObject)Instantiate(Resources.Load("Prefabs/Arrow"), new Vector2((transform.position.x - (3 * transform.localScale.x / 10)), transform.position.y), transform.rotation);
+		Vector3 theScale = transform.localScale / 10;
+		theScale.x *= -1;
+		arrow.transform.localScale = theScale;
+		arrow.GetComponent<Rigidbody2D>().AddForce(new Vector2(-(400 * transform.localScale.x),0));
 		Destroy (arrow, 2.0f);
-		arrow.GetComponent<Rigidbody2D>().AddForce(new Vector2(1500,0));
-		NetworkServer.Spawn(arrow);
+		//NetworkServer.Spawn(arrow);
 	}
 }
