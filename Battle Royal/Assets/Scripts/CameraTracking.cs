@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 //This class determines the size of the bounding box that follows all players,
 //this allows the camera to feel dynamic so the players can get a better feel for the battle
@@ -6,8 +8,8 @@ public class CameraTracking : MonoBehaviour
 {
 
     [SerializeField]
-    Transform[] targets;
-
+    public List<GameObject> targets = new List<GameObject>();
+    public GameObject[] units;
     [SerializeField]
     float boundingBoxPadding = 2f;
 
@@ -18,6 +20,25 @@ public class CameraTracking : MonoBehaviour
     float zoomSpeed = 20f;
 
     Camera camera;
+    
+    
+    void Update() {
+
+        UpdateUnits();
+
+        foreach (GameObject myUnit in units)  {
+            
+            Debug.Log("Adding unit.");
+            Debug.Log("This unit is: " + myUnit.name);
+            targets = new List<GameObject>();
+            targets.AddRange(GameObject.FindGameObjectsWithTag("Player"));
+        }
+    }
+
+    void UpdateUnits() {
+       units = GameObject.FindGameObjectsWithTag("Player");
+    }
+
 
     void Awake()
     {
@@ -43,9 +64,14 @@ public class CameraTracking : MonoBehaviour
         float minY = Mathf.Infinity;
         float maxY = Mathf.NegativeInfinity;
 
-        foreach (Transform target in targets)
+        if(targets.Count == 0)
         {
-            Vector3 position = target.position;
+            camera.orthographicSize = 1;
+        }
+
+        foreach (GameObject target in targets)
+        {
+            Vector3 position = GameObject.Find("Player").transform.position;
 
             minX = Mathf.Min(minX, position.x);
             minY = Mathf.Min(minY, position.y);
@@ -55,6 +81,8 @@ public class CameraTracking : MonoBehaviour
 
         return Rect.MinMaxRect(minX - boundingBoxPadding, maxY + boundingBoxPadding, maxX + boundingBoxPadding, minY - boundingBoxPadding);
     }
+
+
 
     /// <summary>
     /// Calculates the center position of where all players will fit into the camera
@@ -86,4 +114,5 @@ public class CameraTracking : MonoBehaviour
 
         return Mathf.Clamp(Mathf.Lerp(camera.orthographicSize, orthographicSize, Time.deltaTime * zoomSpeed), minimumOrthographicSize, Mathf.Infinity);
     }
+
 }
