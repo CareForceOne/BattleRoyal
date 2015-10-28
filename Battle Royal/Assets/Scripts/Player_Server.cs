@@ -4,7 +4,7 @@ using UnityEngine.Networking;
 
 public class Player_Server : NetworkBehaviour {
 
-	public Player_Movement player;
+	public Player player;
 	
 	// Use this for initialization
 	void Start () {
