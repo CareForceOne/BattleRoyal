@@ -4,13 +4,14 @@ using UnityEngine.Networking;
 
 public class Player_Server : NetworkBehaviour {
 
-	public Player_Movement player;
+	public Player player;
 	
 	// Use this for initialization
 	void Start () {
-		if (NetworkClient.active) {
+		//if (NetworkClient.active) {
 			player.EventFlip += flip;
-		}
+			//player.EventPunch += punch;
+		//}
 	}
 
 	// Update is called once per frame
@@ -20,6 +21,13 @@ public class Player_Server : NetworkBehaviour {
 	}
 
 	public void flip(){
-		transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
 	}
+
+	//public void punch(){
+		//flip ();
+		//transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
+	//}
 }
