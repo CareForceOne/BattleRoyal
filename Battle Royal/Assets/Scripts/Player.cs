@@ -77,11 +77,13 @@ public class Player : NetworkBehaviour
 			CmdPunch();
 		}
 		if (Input.GetButtonDown ("Shoot")) {
+			/*
 			if(! isServer){
 				GameObject arrow = (GameObject)Instantiate(Resources.Load("Prefabs/Arrow"), new Vector2((transform.position.x - (3 * transform.localScale.x / 10)), transform.position.y), transform.rotation);
 				Destroy (arrow, 2.0f);
 				arrow.GetComponent<Rigidbody2D>().AddForce(new Vector2(-(400 * transform.localScale.x),0));
 			}
+			*/
 			CmdShoot();
 		}
     }
@@ -161,6 +163,6 @@ public class Player : NetworkBehaviour
 		arrow.transform.localScale = theScale;
 		arrow.GetComponent<Rigidbody2D>().AddForce(new Vector2(-(400 * transform.localScale.x),0));
 		Destroy (arrow, 2.0f);
-		//NetworkServer.Spawn(arrow);
+		NetworkServer.Spawn(arrow);
 	}
 }
