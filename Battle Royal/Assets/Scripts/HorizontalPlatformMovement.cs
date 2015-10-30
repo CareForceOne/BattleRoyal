@@ -5,9 +5,15 @@ public class HorizontalPlatformMovement : MonoBehaviour {
 
     int right = 0;
     int left = 0;
+	int waitR = 0;
+	int waitL = 0;
     public bool moveRightFirst = true;
     float horizontalPlatformSpeed = 0;
     public float distanceToMove = 5;
+	public bool waitRight = false;
+	public int waitRightFor = 0;
+	public bool waitLeft = false;
+	public int waitLeftFor = 0;
 
 
 // Use this for initialization
@@ -42,6 +48,10 @@ void Update()
             right++;
             horizontalPlatformSpeed += (float)-.001;
         }
+		else if(waitRight && waitR < waitRightFor*30)
+       	{
+			waitR++;
+		}
         else if (left < 50)
         {
             transform.Translate(horizontalPlatformSpeed, 0, 0);
@@ -59,10 +69,16 @@ void Update()
             left++;
             horizontalPlatformSpeed += (float).001;
         }
+		else if(waitLeft && waitL < waitLeftFor*30)
+		{
+			waitL++;
+		}
         else
         {
             left = 0;
             right = 0;
+			waitL = 0;
+			waitR = 0;
         }
 
     }
