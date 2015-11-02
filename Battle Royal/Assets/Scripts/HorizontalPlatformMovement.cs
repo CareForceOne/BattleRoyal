@@ -7,6 +7,7 @@ public class HorizontalPlatformMovement : MonoBehaviour {
     int left = 0;
 	int waitR = 0;
 	int waitL = 0;
+	int wait = 0;
     public bool moveRightFirst = true;
     float horizontalPlatformSpeed = 0;
     public float distanceToMove = 5;
@@ -14,6 +15,8 @@ public class HorizontalPlatformMovement : MonoBehaviour {
 	public int waitRightFor = 0;
 	public bool waitLeft = false;
 	public int waitLeftFor = 0;
+	public bool waitImmediatley = false;
+	public int waitImmediatleyFor = 0;
 
 
 // Use this for initialization
@@ -28,8 +31,12 @@ void Start()
 // Update is called once per frame
 void Update()
     {
-        
-        if (right < 50)
+        if(waitImmediatley && wait < waitImmediatleyFor*30)
+		{
+			wait++;
+		}
+
+        else if (right < 50)
         {
             transform.Translate(horizontalPlatformSpeed, 0, 0);
             right++;
