@@ -8,46 +8,44 @@ public class CameraTracking : MonoBehaviour
 {
 
     [SerializeField]
-    public List<GameObject> targets = new List<GameObject>();
-    public GameObject[] units;
+    public GameObject[] targets = new GameObject[1];
     [SerializeField]
-    float boundingBoxPadding = 2f;
+    float boundingBoxPadding =6f;
 
     [SerializeField]
-    float minimumOrthographicSize = 8f;
+    float minimumOrthographicSize = 12f;
 
     [SerializeField]
     float zoomSpeed = 20f;
 
     Camera camera;
-    
-    
-    void Update() {
+    int counter = 0;
 
+    void Update()  {
         UpdateUnits();
-
-        foreach (GameObject myUnit in units)  {
-            
-            Debug.Log("Adding unit.");
-            Debug.Log("This unit is: " + myUnit.name);
-            targets = new List<GameObject>();
-            targets.AddRange(GameObject.FindGameObjectsWithTag("Player"));
+        //when there is a gameObject  myUnits in the game then  it goes through this loop
+        foreach (GameObject myUnit in targets)  {
+            //adds 1 to counter, which keeps track of how many players there are
+            counter +=1;
+            //then it recreates targets of [counter] GameObjects
+            targets = new GameObject[counter];
+            //afterwards it adds all the GameObjects with the tag Player into the array
+            targets = GameObject.FindGameObjectsWithTag("Player");
         }
     }
 
-    void UpdateUnits() {
-       units = GameObject.FindGameObjectsWithTag("Player");
+    //this method checks every frame for an object called Player
+    void UpdateUnits()  {
+        targets = GameObject.FindGameObjectsWithTag("Player");
     }
 
 
-    void Awake()
-    {
+    void Awake() {
         camera = GetComponent<Camera>();
         camera.orthographic = true;
     }
 
-    void LateUpdate()
-    {
+    void LateUpdate() {
         Rect boundingBox = CalculateTargetsBoundingBox();
         transform.position = CalculateCameraPosition(boundingBox);
         camera.orthographicSize = CalculateOrthographicSize(boundingBox);
@@ -57,21 +55,24 @@ public class CameraTracking : MonoBehaviour
     /// Calculates how large the camera view should be in comparsion to the players
     /// </summary>
     /// <returns>A Rect containing all the targets.</returns>
-    Rect CalculateTargetsBoundingBox()
-    {
+    Rect CalculateTargetsBoundingBox() {
         float minX = Mathf.Infinity;
         float maxX = Mathf.NegativeInfinity;
         float minY = Mathf.Infinity;
         float maxY = Mathf.NegativeInfinity;
 
-        if(targets.Count == 0)
-        {
-            camera.orthographicSize = 1;
+        //if there currently isn't any players on the board it will update once players join the game
+        if (counter == 0){
+            Vector3 position = GameObject.Find("Player").transform.position;
+
+            minX = Mathf.Min(minX, position.x);
+            minY = Mathf.Min(minY, position.y);
+            maxX = Mathf.Max(maxX, position.x);
+            maxY = Mathf.Max(maxY, position.y);
         }
 
-        foreach (GameObject target in targets)
-        {
-            Vector3 position = GameObject.Find("Player").transform.position;
+        foreach (GameObject target in targets){
+            Vector3 position = target.transform.position;
 
             minX = Mathf.Min(minX, position.x);
             minY = Mathf.Min(minY, position.y);
