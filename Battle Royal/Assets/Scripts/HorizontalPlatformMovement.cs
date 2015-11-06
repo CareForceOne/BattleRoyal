@@ -8,6 +8,7 @@ public class HorizontalPlatformMovement : MonoBehaviour {
 	int waitR = 0;
 	int waitL = 0;
 	int wait = 0;
+	bool lF = false;
     public bool moveRightFirst = true;
     float horizontalPlatformSpeed = 0;
     public float distanceToMove = 5;
@@ -24,40 +25,45 @@ void Start()
     {
         if (moveRightFirst == false)
         {
-            right = (int)((distanceToMove - 2.5) / .05) + 100;
+            //right = (int)((distanceToMove - 2.5) / .05) + 100;
+			lF  = true;
         }
     }
     
 // Update is called once per frame
 void Update()
     {
-        if(waitImmediatley && wait < waitImmediatleyFor*30)
+        if(waitImmediatley && wait < waitImmediatleyFor*30 && !lF)
 		{
 			wait++;
 		}
 
-        else if (right < 50)
+        else if (right < 50 && !lF)
         {
             transform.Translate(horizontalPlatformSpeed, 0, 0);
             right++;
             horizontalPlatformSpeed += (float).001;
             
         }
-        else if (right < ((distanceToMove-2.5)/.05)+50)
+        else if (right < ((distanceToMove-2.5)/.05)+50 && !lF)
         {
             transform.Translate(horizontalPlatformSpeed, 0, 0);
             right++;
             
         }
-        else if (right < ((distanceToMove - 2.5) / .05) + 100)
+		else if (right < ((distanceToMove - 2.5) / .05) + 100 && !lF)
         {
             transform.Translate(horizontalPlatformSpeed, 0, 0);
             right++;
             horizontalPlatformSpeed += (float)-.001;
         }
-		else if(waitRight && waitR < waitRightFor*30)
-       	{
+		else if(waitRight && waitR < waitRightFor*30 && !lF)
+		{
 			waitR++;
+		}
+		else if(waitImmediatley && wait < waitImmediatleyFor*30 && lF)
+		{
+			wait++;
 		}
         else if (left < 50)
         {
@@ -86,6 +92,8 @@ void Update()
             right = 0;
 			waitL = 0;
 			waitR = 0;
+			lF = false;
+			waitImmediatley = false;
         }
 
     }
