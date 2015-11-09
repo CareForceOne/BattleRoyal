@@ -1,16 +1,20 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.Networking;
+using UnityEngine.Networking.Types;
+using UnityEngine.Networking.Match;
 using System.Collections.Generic;
 
 enum Gamemodes
 {
-    TeamDeathmatch=1,
-    FreeForAll=2,
-    KingOfTheHill=3
+    TeamDeathmatch = 1,
+    FreeForAll = 2,
+    KingOfTheHill = 3
 };
 
-public class HostGame : MonoBehaviour {
+public class HostGame : MonoBehaviour
+{
     public Text ServerName;
     public Dropdown Gamemode;
     public Text Password;
@@ -18,19 +22,49 @@ public class HostGame : MonoBehaviour {
     public Dropdown Map;
 
     // Temporary solutions, i don't want to leave this here
-    public Dictionary<string, int> accounts = new Dictionary<string, int>();
+    public Dictionary<string, int> maps = new Dictionary<string, int>();
+
+    NetworkMatch networkMatch;
 
     void Start()
     {
-        accounts.Add("test", 1);
-        accounts.Add("scene3", 2);
-        accounts.Add("scene5", 3);
+        maps.Add("test", 1);
+        maps.Add("scene3", 2);
+        maps.Add("scene5", 3);
 
-        bool useNat = !Network.HavePublicAddress();
-        Network.InitializeServer(32, 25000, useNat);
+        //bool useNat = !Network.HavePublicAddress();
+        //Network.InitializeServer(32, 25000, useNat);
+
+        
     }
 
-    void OnServerInitialized()
+    int lastCount = 0;
+    void OnGUI()
+    {
+        if (GUILayout.Button("List rooms"))
+        {
+            GUILayout.Label("Current rooms: " + lastCount);
+            networkMatch.ListMatches(0, 20, "", OnList);
+        }
+    }
+
+    public void OnList(ListMatchResponse matchListResponse)
+    {
+        if (matchListResponse.success)
+        {
+            lastCount = matchListResponse.matches.Count;
+            Debug.Log(matchListResponse.matches.Count);
+        }
+
+    }
+
+    void Awake()
+    {
+        networkMatch = gameObject.AddComponent<NetworkMatch>();
+    }
+
+    // Old attempt, trying something new
+    /*void OnServerInitialized()
     {
         //MasterServer.RegisterHost("MyGameVer1.0.0_42", "My Game Instance", "This is a comment and place to store data");
         MasterServer.RegisterHost("test", "Temp", "Screw descriptions");
@@ -53,7 +87,7 @@ public class HostGame : MonoBehaviour {
 
     }
 
-    /*void OnFailedToConnectToMasterServer(NetworkConnectionError info)
+    void OnFailedToConnectToMasterServer(NetworkConnectionError info)
     {
         Debug.Log("Could not connect to master server: " + info);
     }
@@ -66,23 +100,28 @@ public class HostGame : MonoBehaviour {
 
     }*/
 
+    int levelID = 0;
     public void Host()
     {
         RemoveErrors();
-        if(true || isValid())
+        if (true || isValid())
         {
-            int level = -1;
-            accounts.TryGetValue(Map.captionText.text, out level);
+            maps.TryGetValue(Map.captionText.text, out levelID);
 
             // If we didn't get anything back we should probably handle that
-            if (level == -1)
+            if (levelID == -1)
             { }
 
-            // You're going to be the dedicated server for now
-            
-            
-            Application.LoadLevel(level);
-            //Debug.Log(MasterServer.PollHostList().Length);
+            CreateMatchRequest create = new CreateMatchRequest();
+            create.name = ServerName.text;
+            create.size = System.Convert.ToUInt32(MaxPlayers.captionText.text);
+            create.advertise = true;
+            create.password = Password.text;
+            // Gamemode?
+
+            networkMatch.CreateMatch(create, OnMatchCreate);
+
+            //Application.LoadLevel(level);
         }
         else
         {
@@ -91,13 +130,39 @@ public class HostGame : MonoBehaviour {
         }
     }
 
+    public void OnMatchCreate(CreateMatchResponse matchResponse)
+    {
+        if (matchResponse.success)
+        {
+            Debug.Log("Created match succeeded");
+            Utility.SetAccessTokenForNetwork(matchResponse.networkId, new NetworkAccessToken(matchResponse.accessTokenString));
+            NetworkServer.Listen(new MatchInfo(matchResponse), 9000);
+
+            networkMatch.ListMatches(0, 20, "", OnMatchList);
+        }
+        else
+        {
+            Debug.Log("Create match failed");
+        }
+    }
+
+
+
+    public void OnMatchList(ListMatchResponse matchListResponse)
+    {
+        if (matchListResponse.success)
+        {
+            Debug.Log(matchListResponse.matches.Count);
+        }
+    }
+
     // Make sure all of the public variables are set to something usable
-	private bool isValid()
+    private bool isValid()
     {
         // Make sure a server name was given
         // Might also need to make sure the name isn't already in use
         if (ServerName.text.Length < 1)
-            return false; 
+            return false;
 
         // Make sure the gamemode chosen exists
         if (Gamemode.value < 1 || Gamemode.value > System.Enum.GetNames(typeof(Gamemodes)).Length)
