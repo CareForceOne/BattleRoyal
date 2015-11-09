@@ -12,9 +12,9 @@ public class KillBlock : MonoBehaviour {
 	void Update () {
 	}
 
-	void OnTriggerEnter2D (Collider2D player, Collider2D wall, Collider wall2){
+	void OnTriggerEnter2D (Collider2D player){
 		Debug.Log("Does this even work?");
-		if (player.gameObject.tag == "Player" && wall.gameObject.tag == "Crush" && wall2.gameObject.tag == "Crush") {
+		if (player.gameObject.tag == "Player") {
 			Debug.Log("Should be what it hits");
 			player.gameObject.GetComponent<Player>().takeDamage(100);
 		}
