@@ -6,8 +6,12 @@ public class GameManager : MonoBehaviour {
 
 	public GameObject playerPrefab;
 	public GameObject manager;
+	//public Camera camera;
 
 	public void playerWasKilled(Player player){
+		//camera = Camera.main;
+		//CameraTracking cameraScript = camera.GetComponent<CameraTracking> ();
+
 		NetworkConnection conn = player.connectionToClient;
 		Transform spawnPoint = manager.GetComponent<NetworkManager> ().GetStartPosition ();
 		//GameObject newPlayer = Instantiate<GameObject> (playerPrefab);
@@ -15,5 +19,6 @@ public class GameManager : MonoBehaviour {
 		Destroy (player.gameObject);
 
 		NetworkServer.ReplacePlayerForConnection (conn, newPlayer, 0);
+
 	}
 }

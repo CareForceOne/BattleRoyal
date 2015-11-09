@@ -7,50 +7,66 @@ using UnityEngine;
 public class CameraTracking : MonoBehaviour
 {
 
-    [SerializeField]
-    public GameObject[] targets = new GameObject[1];
-    [SerializeField]
-    float boundingBoxPadding =6f;
+    //[SerializeField]
+    //public GameObject[] targets = new GameObject[1];
+	//public List<GameObject> targets = new List<GameObject>();
+	public GameObject[] targets;
 
-    [SerializeField]
+    //[SerializeField]
+    float boundingBoxPadding = 20f;
+
+    //[SerializeField]
     float minimumOrthographicSize = 12f;
 
-    [SerializeField]
+    //[SerializeField]
     float zoomSpeed = 20f;
 
     Camera camera;
     int counter = 0;
 
     void Update()  {
+		/*
         UpdateUnits();
         //when there is a gameObject  myUnits in the game then  it goes through this loop
         foreach (GameObject myUnit in targets)  {
             //adds 1 to counter, which keeps track of how many players there are
-            counter +=1;
+            counter += 1;
             //then it recreates targets of [counter] GameObjects
             targets = new GameObject[counter];
             //afterwards it adds all the GameObjects with the tag Player into the array
             targets = GameObject.FindGameObjectsWithTag("Player");
         }
-    }
-
-    //this method checks every frame for an object called Player
+        */
+		targets = GameObject.FindGameObjectsWithTag("Player");
+		Rect boundingBox = CalculateTargetsBoundingBox();
+		transform.position = CalculateCameraPosition(boundingBox);
+		camera.orthographicSize = CalculateOrthographicSize(boundingBox);
+	}
+	
+	//this method checks every frame for an object called Player
     void UpdateUnits()  {
-        targets = GameObject.FindGameObjectsWithTag("Player");
+        //targets = GameObject.FindGameObjectsWithTag("Player");
     }
 
 
-    void Awake() {
+    void Start() {
         camera = GetComponent<Camera>();
         camera.orthographic = true;
+		if (targets == null) {
+			targets = GameObject.FindGameObjectsWithTag("Player");
+		}
     }
 
+	void OnPlayerConnected(NetworkPlayer player){
+		targets = GameObject.FindGameObjectsWithTag("Player");
+	}
+	/*
     void LateUpdate() {
         Rect boundingBox = CalculateTargetsBoundingBox();
         transform.position = CalculateCameraPosition(boundingBox);
         camera.orthographicSize = CalculateOrthographicSize(boundingBox);
     }
-
+	*/
     /// <summary>
     /// Calculates how large the camera view should be in comparsion to the players
     /// </summary>
@@ -62,16 +78,20 @@ public class CameraTracking : MonoBehaviour
         float maxY = Mathf.NegativeInfinity;
 
         //if there currently isn't any players on the board it will update once players join the game
-        if (counter == 0){
+        if (targets.Length == 0){
+			/*
             Vector3 position = GameObject.Find("Player").transform.position;
 
             minX = Mathf.Min(minX, position.x);
             minY = Mathf.Min(minY, position.y);
             maxX = Mathf.Max(maxX, position.x);
             maxY = Mathf.Max(maxY, position.y);
+			*/
+			return new Rect(0,0,0,0);
         }
 
         foreach (GameObject target in targets){
+			//GameObject temp = (GameObject)target;
             Vector3 position = target.transform.position;
 
             minX = Mathf.Min(minX, position.x);
