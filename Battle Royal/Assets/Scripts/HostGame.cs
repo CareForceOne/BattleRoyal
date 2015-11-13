@@ -21,6 +21,8 @@ public class HostGame : MonoBehaviour
     public Dropdown MaxPlayers;
     public Dropdown Map;
 
+    public Text debugText;
+
     // Temporary solutions, i don't want to leave this here
     public Dictionary<string, int> maps = new Dictionary<string, int>();
 
@@ -35,7 +37,10 @@ public class HostGame : MonoBehaviour
         //bool useNat = !Network.HavePublicAddress();
         //Network.InitializeServer(32, 25000, useNat);
 
-        
+        GameObject debugTextObject = GameObject.Find("DebugText");
+        debugText = debugTextObject.GetComponent<Text>();
+
+        debugText.text = "debug";
     }
 
     int lastCount = 0;
@@ -53,6 +58,7 @@ public class HostGame : MonoBehaviour
         if (matchListResponse.success)
         {
             lastCount = matchListResponse.matches.Count;
+            debugText.text = "Player Count: " + matchListResponse.matches.Count;
             Debug.Log(matchListResponse.matches.Count);
         }
 
@@ -134,7 +140,7 @@ public class HostGame : MonoBehaviour
     {
         if (matchResponse.success)
         {
-            Debug.Log("Created match succeeded");
+            debugText.text = "Created Match";
             Utility.SetAccessTokenForNetwork(matchResponse.networkId, new NetworkAccessToken(matchResponse.accessTokenString));
             NetworkServer.Listen(new MatchInfo(matchResponse), 9000);
 
@@ -142,6 +148,7 @@ public class HostGame : MonoBehaviour
         }
         else
         {
+            debugText.text = "Failed creating match";
             Debug.Log("Create match failed");
         }
     }
@@ -152,6 +159,7 @@ public class HostGame : MonoBehaviour
     {
         if (matchListResponse.success)
         {
+            debugText.text = "Player count: " + matchListResponse.matches.Count;
             Debug.Log(matchListResponse.matches.Count);
         }
     }
