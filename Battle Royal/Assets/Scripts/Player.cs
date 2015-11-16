@@ -27,8 +27,13 @@ public class Player : NetworkBehaviour
     void Start()
     {
 		health = 100;
+		networkAnimator = GetComponent<NetworkAnimator> ();
+		//networkAnimator = gameObject.AddComponent<NetworkAnimator> ();
 		animator = GetComponent<Animator>();
-		networkAnimator = GetComponent<NetworkAnimator>();
+		//networkAnimator.animator = animator;
+		for (int i = -1; i < animator.parameterCount; i++) {
+			networkAnimator.SetParameterAutoSend(i, true);
+		}
     }
 
     // Update is called once per frame

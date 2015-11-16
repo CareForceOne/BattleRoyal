@@ -17,1305 +17,403 @@ Loading C:\Users\mlviscon\BattleRoyal\Battle Royal\cameratest_Data\Managed\Unity
 Platform assembly: C:\Users\mlviscon\BattleRoyal\Battle Royal\cameratest_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\mlviscon\BattleRoyal\Battle Royal\cameratest_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\mlviscon\BattleRoyal\Battle Royal\cameratest_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.071 seconds
+- Completed reload, in  0.135 seconds
 desktop: 1920x1080 60Hz; virtual: 3200x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
 Platform assembly: C:\Users\mlviscon\BattleRoyal\Battle Royal\cameratest_Data\Managed\System.dll (this message is harmless)
-Script error: OnTriggerEnter2D
-The message must have 0 or 1 parameters.
-The message will be ignored.
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.Start () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoScriptCache.cpp Line: 176)
+(Filename:  Line: -1)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 510 -> priority: 1 
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 16
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 16
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 16
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 16
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 17
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 16
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 17
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 17
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 17
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 17
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 18
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 18
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 19
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 19
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 20
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 20
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 46
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 46
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 46
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 46
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 46
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 46
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 87
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 87
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 87
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 87
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 87
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 88
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 87
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 88
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 88
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 88
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 88
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 88
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 89
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 89
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 89
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 90
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 90
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 90
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 91
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 91
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 92
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 92
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 92
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 93
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 93
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 94
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 94
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 95
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 95
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 95
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 95
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 96
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 95
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 96
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 95
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 96
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 96
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 97
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 96
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 97
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 96
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 97
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 98
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 97
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 98
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 97
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 98
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 98
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 98
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 111
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 111
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 112
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 112
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 113
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 117
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 117
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 117
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 117
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 118
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 117
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 118
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 117
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 118
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 118
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 119
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 118
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 119
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 118
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 119
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 120
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 119
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 120
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 119
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 120
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 119
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 120
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 121
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 120
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 121
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 120
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 121
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 121
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 121
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 121
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 130
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 130
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 130
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 131
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 130
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 131
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 131
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 131
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 132
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 132
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 132
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 133
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 133
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 133
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 138
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 138
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 138
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 138
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 139
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 139
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 139
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 139
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 140
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 140
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 140
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 140
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 141
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 141
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 141
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 142
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 142
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 143
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 143
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+  Thread -> id: 17fc -> priority: 1 
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.375931 ms
 
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 144
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 144
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 145
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 145
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 146
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 524.
+Total: 0.508694 ms (FindLiveObjects: 0.053563 ms CreateObjectMapping: 0.014754 ms MarkObjects: 0.435565 ms  DeleteObjects: 0.003848 ms)
 
-trigger
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.Start () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 147
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 147
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 147
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 148
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 148
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.647254 ms
 
-Did not find target for sync message for 148
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 148
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Did not find target for sync message for 148
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 524.
+Total: 0.506128 ms (FindLiveObjects: 0.048752 ms CreateObjectMapping: 0.012508 ms MarkObjects: 0.440376 ms  DeleteObjects: 0.003848 ms)
 
-Did not find target for sync message for 148
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.Start () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.679649 ms
 
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 524.
+Total: 0.494581 ms (FindLiveObjects: 0.031111 ms CreateObjectMapping: 0.022451 ms MarkObjects: 0.436848 ms  DeleteObjects: 0.003207 ms)
 
-Did not find target for sync message for 149
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.Start () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-Did not find target for sync message for 149
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.615501 ms
 
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 524.
+Total: 0.711402 ms (FindLiveObjects: 0.025017 ms CreateObjectMapping: 0.013150 ms MarkObjects: 0.668743 ms  DeleteObjects: 0.003848 ms)
 
-HIT
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.Start () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-Did not find target for sync message for 154
+MatchMakingClient ListMatches :https://mm.unet.unity3d.com/json/reply/ListMatchRequest
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Did not find target for sync message for 154
+JSON Response: [[UnityEngine.Networking.Match.ListMatchResponse]-success:True-extendedInfo:]-matches.Count:0
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-trigger
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.OnList (UnityEngine.Networking.Match.ListMatchResponse matchListResponse) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.Match.NetworkMatch+<ProcessMatchResponse>c__Iterator0`1[UnityEngine.Networking.Match.ListMatchResponse].MoveNext () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-HIT
+MatchMakingClient ListMatches :https://mm.unet.unity3d.com/json/reply/ListMatchRequest
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Did not find target for sync message for 155
+JSON Response: [[UnityEngine.Networking.Match.ListMatchResponse]-success:True-extendedInfo:]-matches.Count:0
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Did not find target for sync message for 155
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.OnList (UnityEngine.Networking.Match.ListMatchResponse matchListResponse) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.Match.NetworkMatch+<ProcessMatchResponse>c__Iterator0`1[UnityEngine.Networking.Match.ListMatchResponse].MoveNext () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-trigger
+MatchMakingClient ListMatches :https://mm.unet.unity3d.com/json/reply/ListMatchRequest
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-HIT
+JSON Response: [[UnityEngine.Networking.Match.ListMatchResponse]-success:True-extendedInfo:]-matches.Count:0
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Did not find target for sync message for 156
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.OnList (UnityEngine.Networking.Match.ListMatchResponse matchListResponse) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.Match.NetworkMatch+<ProcessMatchResponse>c__Iterator0`1[UnityEngine.Networking.Match.ListMatchResponse].MoveNext () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-Did not find target for sync message for 156
+MatchMakingClient ListMatches :https://mm.unet.unity3d.com/json/reply/ListMatchRequest
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-trigger
+JSON Response: [[UnityEngine.Networking.Match.ListMatchResponse]-success:True-extendedInfo:]-matches.Count:1
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-HIT
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.OnList (UnityEngine.Networking.Match.ListMatchResponse matchListResponse) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.Match.NetworkMatch+<ProcessMatchResponse>c__Iterator0`1[UnityEngine.Networking.Match.ListMatchResponse].MoveNext () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-Did not find target for sync message for 157
+MatchMakingClient ListMatches :https://mm.unet.unity3d.com/json/reply/ListMatchRequest
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Did not find target for sync message for 157
+JSON Response: [[UnityEngine.Networking.Match.ListMatchResponse]-success:True-extendedInfo:]-matches.Count:1
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Did not find target for sync message for 157
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.OnList (UnityEngine.Networking.Match.ListMatchResponse matchListResponse) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.Match.NetworkMatch+<ProcessMatchResponse>c__Iterator0`1[UnityEngine.Networking.Match.ListMatchResponse].MoveNext () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-trigger
+MatchMakingClient ListMatches :https://mm.unet.unity3d.com/json/reply/ListMatchRequest
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-HIT
+JSON Response: [[UnityEngine.Networking.Match.ListMatchResponse]-success:True-extendedInfo:]-matches.Count:1
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Did not find target for sync message for 158
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.OnList (UnityEngine.Networking.Match.ListMatchResponse matchListResponse) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.Match.NetworkMatch+<ProcessMatchResponse>c__Iterator0`1[UnityEngine.Networking.Match.ListMatchResponse].MoveNext () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-Did not find target for sync message for 158
+MatchMakingClient ListMatches :https://mm.unet.unity3d.com/json/reply/ListMatchRequest
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Did not find target for sync message for 158
+JSON Response: [[UnityEngine.Networking.Match.ListMatchResponse]-success:True-extendedInfo:]-matches.Count:1
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Did not find target for sync message for 158
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.OnList (UnityEngine.Networking.Match.ListMatchResponse matchListResponse) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.Match.NetworkMatch+<ProcessMatchResponse>c__Iterator0`1[UnityEngine.Networking.Match.ListMatchResponse].MoveNext () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-Did not find target for sync message for 158
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.609406 ms
 
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 524.
+Total: 0.733533 ms (FindLiveObjects: 0.036564 ms CreateObjectMapping: 0.022772 ms MarkObjects: 0.670026 ms  DeleteObjects: 0.003848 ms)
 
-HIT
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.Start () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-Did not find target for sync message for 159
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.611010 ms
 
-Did not find target for sync message for 159
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 524.
+Total: 0.689271 ms (FindLiveObjects: 0.029508 ms CreateObjectMapping: 0.013150 ms MarkObjects: 0.642122 ms  DeleteObjects: 0.003848 ms)
 
-Did not find target for sync message for 159
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.Start () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-Did not find target for sync message for 159
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.646612 ms
 
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 524.
+Total: 0.685101 ms (FindLiveObjects: 0.030470 ms CreateObjectMapping: 0.013150 ms MarkObjects: 0.637311 ms  DeleteObjects: 0.003848 ms)
 
-HIT
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.Start () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-Did not find target for sync message for 160
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.648537 ms
 
-Did not find target for sync message for 159
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 524.
+Total: 0.700497 ms (FindLiveObjects: 0.029828 ms CreateObjectMapping: 0.013150 ms MarkObjects: 0.653669 ms  DeleteObjects: 0.003528 ms)
 
-Did not find target for sync message for 160
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.Start () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-Did not find target for sync message for 160
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.667781 ms
 
-Did not find target for sync message for 160
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 524.
+Total: 0.714930 ms (FindLiveObjects: 0.026621 ms CreateObjectMapping: 0.012829 ms MarkObjects: 0.671309 ms  DeleteObjects: 0.003528 ms)
 
-trigger
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.Start () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-HIT
+MatchMakingClient ListMatches :https://mm.unet.unity3d.com/json/reply/ListMatchRequest
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Did not find target for sync message for 160
+JSON Response: [[UnityEngine.Networking.Match.ListMatchResponse]-success:True-extendedInfo:]-matches.Count:1
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Did not find target for sync message for 161
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.OnList (UnityEngine.Networking.Match.ListMatchResponse matchListResponse) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.Match.NetworkMatch+<ProcessMatchResponse>c__Iterator0`1[UnityEngine.Networking.Match.ListMatchResponse].MoveNext () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-Did not find target for sync message for 161
+MatchMakingClient ListMatches :https://mm.unet.unity3d.com/json/reply/ListMatchRequest
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Did not find target for sync message for 161
+JSON Response: [[UnityEngine.Networking.Match.ListMatchResponse]-success:True-extendedInfo:]-matches.Count:1
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-trigger
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.OnList (UnityEngine.Networking.Match.ListMatchResponse matchListResponse) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.Match.NetworkMatch+<ProcessMatchResponse>c__Iterator0`1[UnityEngine.Networking.Match.ListMatchResponse].MoveNext () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.670989 ms
 
-Did not find target for sync message for 161
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 524.
+Total: 0.877546 ms (FindLiveObjects: 0.044262 ms CreateObjectMapping: 0.023093 ms MarkObjects: 0.805379 ms  DeleteObjects: 0.003848 ms)
 
-Did not find target for sync message for 162
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.Start () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-trigger
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.594973 ms
 
-HIT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 524.
+Total: 0.837774 ms (FindLiveObjects: 0.053242 ms CreateObjectMapping: 0.013150 ms MarkObjects: 0.766890 ms  DeleteObjects: 0.003848 ms)
 
-Did not find target for sync message for 166
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.Start () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-trigger
+MatchMakingClient ListMatches :https://mm.unet.unity3d.com/json/reply/ListMatchRequest
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-HIT
+MatchMakingClient ListMatches :https://mm.unet.unity3d.com/json/reply/ListMatchRequest
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Did not find target for sync message for 178
+JSON Response: [[UnityEngine.Networking.Match.ListMatchResponse]-success:True-extendedInfo:]-matches.Count:1
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Did not find target for sync message for 178
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.OnList (UnityEngine.Networking.Match.ListMatchResponse matchListResponse) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.Match.NetworkMatch+<ProcessMatchResponse>c__Iterator0`1[UnityEngine.Networking.Match.ListMatchResponse].MoveNext () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-Did not find target for sync message for 178
+MatchMakingClient ListMatches :https://mm.unet.unity3d.com/json/reply/ListMatchRequest
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Did not find target for sync message for 178
+JSON Response: [[UnityEngine.Networking.Match.ListMatchResponse]-success:True-extendedInfo:]-matches.Count:1
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Did not find target for sync message for 178
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.OnList (UnityEngine.Networking.Match.ListMatchResponse matchListResponse) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.Match.NetworkMatch+<ProcessMatchResponse>c__Iterator0`1[UnityEngine.Networking.Match.ListMatchResponse].MoveNext () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-Did not find target for sync message for 178
+JSON Response: [[UnityEngine.Networking.Match.ListMatchResponse]-success:True-extendedInfo:]-matches.Count:1
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-trigger
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.OnList (UnityEngine.Networking.Match.ListMatchResponse matchListResponse) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.Match.NetworkMatch+<ProcessMatchResponse>c__Iterator0`1[UnityEngine.Networking.Match.ListMatchResponse].MoveNext () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-HIT
+MatchMakingClient Create :https://mm.unet.unity3d.com/json/reply/CreateMatchRequest
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Did not find target for sync message for 180
+JSON Response: [[UnityEngine.Networking.Match.CreateMatchResponse]-success:True-extendedInfo:]-address:52.6.182.178,port:9999,networkId:0x0010000000015F37,nodeId:0xC856,usingRelay:True
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Did not find target for sync message for 178
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.OnMatchCreate (UnityEngine.Networking.Match.CreateMatchResponse matchResponse) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.Match.NetworkMatch+<ProcessMatchResponse>c__Iterator0`1[UnityEngine.Networking.Match.CreateMatchResponse].MoveNext () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-Did not find target for sync message for 180
+MatchMakingClient Create :https://mm.unet.unity3d.com/json/reply/CreateMatchRequest
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Did not find target for sync message for 178
+JSON Response: [[UnityEngine.Networking.Match.CreateMatchResponse]-success:True-extendedInfo:]-address:52.6.182.178,port:9999,networkId:0x0010000000015F38,nodeId:0xC857,usingRelay:True
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Did not find target for sync message for 180
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.OnMatchCreate (UnityEngine.Networking.Match.CreateMatchResponse matchResponse) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.Match.NetworkMatch+<ProcessMatchResponse>c__Iterator0`1[UnityEngine.Networking.Match.CreateMatchResponse].MoveNext () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-Did not find target for sync message for 180
+MatchMakingClient Create :https://mm.unet.unity3d.com/json/reply/CreateMatchRequest
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-trigger
+JSON Response: [[UnityEngine.Networking.Match.CreateMatchResponse]-success:True-extendedInfo:]-address:52.6.182.178,port:9999,networkId:0x0010000000015F39,nodeId:0xC858,usingRelay:True
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-HIT
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.OnMatchCreate (UnityEngine.Networking.Match.CreateMatchResponse matchResponse) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.Match.NetworkMatch+<ProcessMatchResponse>c__Iterator0`1[UnityEngine.Networking.Match.CreateMatchResponse].MoveNext () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-Did not find target for sync message for 181
+MatchMakingClient Create :https://mm.unet.unity3d.com/json/reply/CreateMatchRequest
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Did not find target for sync message for 180
+JSON Response: [[UnityEngine.Networking.Match.CreateMatchResponse]-success:True-extendedInfo:]-address:52.6.182.178,port:9999,networkId:0x0010000000015F3A,nodeId:0xC859,usingRelay:True
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Did not find target for sync message for 181
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.OnMatchCreate (UnityEngine.Networking.Match.CreateMatchResponse matchResponse) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.Match.NetworkMatch+<ProcessMatchResponse>c__Iterator0`1[UnityEngine.Networking.Match.CreateMatchResponse].MoveNext () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-Did not find target for sync message for 180
+MatchMakingClient Create :https://mm.unet.unity3d.com/json/reply/CreateMatchRequest
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Did not find target for sync message for 181
+JSON Response: [[UnityEngine.Networking.Match.CreateMatchResponse]-success:True-extendedInfo:]-address:52.6.182.178,port:9999,networkId:0x0010000000015F3B,nodeId:0xC85A,usingRelay:True
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Did not find target for sync message for 180
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.OnMatchCreate (UnityEngine.Networking.Match.CreateMatchResponse matchResponse) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.Match.NetworkMatch+<ProcessMatchResponse>c__Iterator0`1[UnityEngine.Networking.Match.CreateMatchResponse].MoveNext () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-Did not find target for sync message for 181
+MatchMakingClient Create :https://mm.unet.unity3d.com/json/reply/CreateMatchRequest
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Did not find target for sync message for 180
+JSON Response: [[UnityEngine.Networking.Match.CreateMatchResponse]-success:True-extendedInfo:]-address:52.6.182.178,port:9999,networkId:0x0010000000015F3C,nodeId:0xC85B,usingRelay:True
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Did not find target for sync message for 181
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.OnMatchCreate (UnityEngine.Networking.Match.CreateMatchResponse matchResponse) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.Match.NetworkMatch+<ProcessMatchResponse>c__Iterator0`1[UnityEngine.Networking.Match.CreateMatchResponse].MoveNext () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
-Did not find target for sync message for 181
+MatchMakingClient ListMatches :https://mm.unet.unity3d.com/json/reply/ListMatchRequest
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Did not find target for sync message for 181
+JSON Response: [[UnityEngine.Networking.Match.ListMatchResponse]-success:True-extendedInfo:]-matches.Count:7
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Did not find target for sync message for 181
+NullReferenceException: Object reference not set to an instance of an object
+  at HostGame.OnList (UnityEngine.Networking.Match.ListMatchResponse matchListResponse) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.Match.NetworkMatch+<ProcessMatchResponse>c__Iterator0`1[UnityEngine.Networking.Match.ListMatchResponse].MoveNext () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+(Filename:  Line: -1)
 
