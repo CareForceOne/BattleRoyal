@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
-public class VerticalPlatformMovement : MonoBehaviour {
+public class VerticalPlatformMovement : NetworkBehaviour {
     int top = 0;
     int bot = 0;
 	int waitT = 0;
@@ -23,6 +24,9 @@ public class VerticalPlatformMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (!isServer) {
+			return;
+		}
        // Debug.Log(platformMovementSpeed);      
         if(top < 50)
         {
