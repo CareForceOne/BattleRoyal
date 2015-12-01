@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
-public class HorizontalPlatformMovement : MonoBehaviour {
+public class HorizontalPlatformMovement : NetworkBehaviour {
 
     int right = 0;
     int left = 0;
@@ -33,6 +34,9 @@ void Start()
 // Update is called once per frame
 void Update()
     {
+		if (!isServer) {
+			return;
+		}
         if(waitImmediatley && wait < waitImmediatleyFor*30 && !lF)
 		{
 			wait++;

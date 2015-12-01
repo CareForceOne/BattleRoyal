@@ -53,7 +53,7 @@ public class KillBlockMovement : MonoBehaviour {
 		{
 			transform.Translate(horizontalPlatformSpeed, 0, 0);
 			right++;
-			horizontalPlatformSpeed += (float).002;
+			horizontalPlatformSpeed += (float).004;
 			
 		}
 		else if (right < ((distanceToMove-2.5)/.05)+50 && !lF)
@@ -81,7 +81,7 @@ public class KillBlockMovement : MonoBehaviour {
 		{
 			transform.Translate(horizontalPlatformSpeed, 0, 0);
 			left++;
-			horizontalPlatformSpeed += (float)-.002;
+			horizontalPlatformSpeed += (float)-.004;
 		}
 		else if (left < ((distanceToMove-2.5)/.05)+50)
 		{
