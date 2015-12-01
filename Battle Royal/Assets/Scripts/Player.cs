@@ -13,7 +13,7 @@ public class Player : NetworkBehaviour
     public float JUMPCOOLDOWN = 0.5f;
     bool facingRight = false;
 	private Animator animator;
-	private NetworkAnimator networkAnimator;
+	//private NetworkAnimator networkAnimator;
 
 	public delegate void flipDelegate();
 
@@ -27,13 +27,13 @@ public class Player : NetworkBehaviour
     void Start()
     {
 		health = 100;
-		networkAnimator = GetComponent<NetworkAnimator> ();
+		//networkAnimator = GetComponent<NetworkAnimator> ();
 		//networkAnimator = gameObject.AddComponent<NetworkAnimator> ();
 		animator = GetComponent<Animator>();
 		//networkAnimator.animator = animator;
-		for (int i = -1; i < animator.parameterCount; i++) {
-			networkAnimator.SetParameterAutoSend(i, true);
-		}
+		//for (int i = -1; i < animator.parameterCount; i++) {
+			//networkAnimator.SetParameterAutoSend(i, true);
+		//}
     }
 
     // Update is called once per frame
@@ -78,7 +78,7 @@ public class Player : NetworkBehaviour
 		if (Input.GetButtonDown ("Punch")) {
 			//do a sick punch
 			//Debug.Log ("FALCON PUNCH");
-			animator.SetTrigger("punch");
+
 			CmdPunch();
 		}
 		if (Input.GetButtonDown ("Shoot")) {
@@ -154,6 +154,9 @@ public class Player : NetworkBehaviour
 	[Command]
 	void CmdPunch(){
 		//GameObject hitBox = (GameObject)Instantiate(Resources.Load("Prefabs/Hitbox_Punch"), transform.position, transform.rotation);
+		if (isServer) {
+			RpcPunch();
+		}
 		GameObject hitBox = (GameObject)Instantiate(Resources.Load("Prefabs/Hitbox_Punch"), new Vector2((transform.position.x - (2 * transform.localScale.x / 10)), transform.position.y), transform.rotation);
 		hitBox.transform.parent = gameObject.transform;
 		Destroy(hitBox, 1.0f);
@@ -169,5 +172,9 @@ public class Player : NetworkBehaviour
 		arrow.GetComponent<Rigidbody2D>().AddForce(new Vector2(-(400 * transform.localScale.x),0));
 		Destroy (arrow, 2.0f);
 		NetworkServer.Spawn(arrow);
+	}
+	[ClientRpc]
+	void RpcPunch(){
+		animator.SetTrigger("punch");
 	}
 }
