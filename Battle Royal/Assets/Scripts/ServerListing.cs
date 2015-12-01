@@ -62,14 +62,13 @@ public class ServerListing : MonoBehaviour {
             List<MatchDesc> servers = matchListResponse.matches;
             foreach (MatchDesc desc in servers)
             {
-                int levelID = 0;
-                desc.matchAttributes.TryGetValue("scene", out levelID);
                 AddServerButton(desc.name, "None", desc.currentSize, desc.maxSize, desc.isPrivate, 0, desc.networkId);
             }
         }
     }
 
-    void AddServerButton(string HostName, string Gamemode, int curPlayers, int maxPlayers, bool hasPassword, int ping, int levelID, NetworkID netID)
+    // Don't think i can have ping on here
+    void AddServerButton(string HostName, string Gamemode, int curPlayers, int maxPlayers, bool hasPassword, int ping, NetworkID netID)
     {
         GameObject newButton = Instantiate(sampleButton) as GameObject;
         ServerButton newServerButton = newButton.GetComponent<ServerButton>();
@@ -81,6 +80,6 @@ public class ServerListing : MonoBehaviour {
 
         newServerButton.transform.SetParent(contentPanel);
         //Add option for password? That'll be weird
-        newServerButton.setServer(networkMatch, netID, levelID);
+        newServerButton.setServer(networkMatch, netID);
     }
 }

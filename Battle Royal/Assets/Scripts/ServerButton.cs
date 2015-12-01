@@ -16,14 +16,12 @@ public class ServerButton : MonoBehaviour {
     private NetworkMatch networkMatch;
     private NetworkID netID;
     private string pass;
-    private int levelID;
 
-    public void setServer(NetworkMatch networkMatch, NetworkID netID, int levelID, string password = "")
+    public void setServer(NetworkMatch networkMatch, NetworkID netID, string password = "")
     {
         this.networkMatch = networkMatch;
         this.netID = netID;
         this.pass = password;
-        this.levelID = levelID;
     }
 
     public void joinServer()
@@ -34,6 +32,5 @@ public class ServerButton : MonoBehaviour {
     private void callback(JoinMatchResponse response)
     {
         Debug.Log(response.success);
-        Application.LoadLevel(levelID);
     }
 }
