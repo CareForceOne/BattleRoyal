@@ -21,8 +21,6 @@ public class HostGame : MonoBehaviour
     public Dropdown MaxPlayers;
     public Dropdown Map;
 
-    public Text debugText;
-
     // Temporary solutions, i don't want to leave this here
     public Dictionary<string, int> maps = new Dictionary<string, int>();
 
@@ -36,11 +34,6 @@ public class HostGame : MonoBehaviour
 
         //bool useNat = !Network.HavePublicAddress();
         //Network.InitializeServer(32, 25000, useNat);
-
-        GameObject debugTextObject = GameObject.Find("DebugText");
-        debugText = debugTextObject.GetComponent<Text>();
-
-        debugText.text = "debug";
     }
 
     int lastCount = 0;
@@ -58,7 +51,6 @@ public class HostGame : MonoBehaviour
         if (matchListResponse.success)
         {
             lastCount = matchListResponse.matches.Count;
-            debugText.text = "Player Count: " + matchListResponse.matches.Count;
             Debug.Log(matchListResponse.matches.Count);
         }
 
@@ -123,11 +115,17 @@ public class HostGame : MonoBehaviour
             create.size = System.Convert.ToUInt32(MaxPlayers.captionText.text);
             create.advertise = true;
             create.password = Password.text;
-            // Gamemode?
+
+            Dictionary<string, long> attributes = new Dictionary<string, long>();
+            attributes.Add("scene", levelID);
+            //create.matchAttributes.Add("gamemode", );
+
+            create.matchAttributes = attributes;
+            //create.
 
             networkMatch.CreateMatch(create, OnMatchCreate);
 
-            //Application.LoadLevel(level);
+            //Application.LoadLevel(levelID);
         }
         else
         {
@@ -140,29 +138,17 @@ public class HostGame : MonoBehaviour
     {
         if (matchResponse.success)
         {
-            debugText.text = "Created Match";
             Utility.SetAccessTokenForNetwork(matchResponse.networkId, new NetworkAccessToken(matchResponse.accessTokenString));
             NetworkServer.Listen(new MatchInfo(matchResponse), 9000);
 
-            networkMatch.ListMatches(0, 20, "", OnMatchList);
+            Application.LoadLevel(levelID);
         }
         else
         {
-            debugText.text = "Failed creating match";
             Debug.Log("Create match failed");
         }
     }
 
-
-
-    public void OnMatchList(ListMatchResponse matchListResponse)
-    {
-        if (matchListResponse.success)
-        {
-            debugText.text = "Player count: " + matchListResponse.matches.Count;
-            Debug.Log(matchListResponse.matches.Count);
-        }
-    }
 
     // Make sure all of the public variables are set to something usable
     private bool isValid()

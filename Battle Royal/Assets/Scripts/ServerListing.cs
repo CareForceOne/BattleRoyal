@@ -2,6 +2,9 @@
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections;
+using UnityEngine.Networking;
+using UnityEngine.Networking.Types;
+using UnityEngine.Networking.Match;
 using System.Collections.Generic;
 
 [System.Serializable]
@@ -28,42 +31,45 @@ public class ServerSettings {
 public class ServerListing : MonoBehaviour {
 	public GameObject sampleButton;
 	public List<ServerSettings> serverList;
+    NetworkMatch networkMatch;
 
     public Transform contentPanel;
 
 	void Start()
     {
-        MasterServer.RequestHostList("test");
+        networkMatch.ListMatches(0, 20, "", UpdateListing);
+        //MasterServer.RequestHostList("test");
     }
 
-    void OnMasterServerEvent(MasterServerEvent msEvent)
+    public void OnList(ListMatchResponse matchListResponse)
     {
-        Debug.Log(msEvent);
-        if (msEvent == MasterServerEvent.RegistrationSucceeded)
-            Debug.Log("Server registered");
-
-        if (msEvent == MasterServerEvent.HostListReceived)
+        if (matchListResponse.success)
         {
-            Debug.Log(MasterServer.PollHostList().Length);
+            Debug.Log(matchListResponse.matches.Count);
         }
-            //UpdateListing();
 
     }
 
-    private void UpdateListing()
+    void Awake()
     {
-        if (MasterServer.PollHostList().Length != 0)
+        networkMatch = gameObject.AddComponent<NetworkMatch>();
+    }
+
+    private void UpdateListing(ListMatchResponse matchListResponse)
+    {
+        if (matchListResponse.success)
         {
-            HostData[] hostData = MasterServer.PollHostList();
-            foreach (HostData HD in hostData)
+            List<MatchDesc> servers = matchListResponse.matches;
+            foreach (MatchDesc desc in servers)
             {
-                AddServerButton(HD.gameName, HD.gameType, HD.connectedPlayers, HD.playerLimit, HD.passwordProtected, -1);
+                int levelID = 0;
+                desc.matchAttributes.TryGetValue("scene", out levelID);
+                AddServerButton(desc.name, "None", desc.currentSize, desc.maxSize, desc.isPrivate, 0, desc.networkId);
             }
-            MasterServer.ClearHostList();
         }
     }
 
-    void AddServerButton(string HostName, string Gamemode, int curPlayers, int maxPlayers, bool hasPassword, int ping)
+    void AddServerButton(string HostName, string Gamemode, int curPlayers, int maxPlayers, bool hasPassword, int ping, int levelID, NetworkID netID)
     {
         GameObject newButton = Instantiate(sampleButton) as GameObject;
         ServerButton newServerButton = newButton.GetComponent<ServerButton>();
@@ -74,5 +80,7 @@ public class ServerListing : MonoBehaviour {
         newServerButton.Ping.text = ping.ToString();
 
         newServerButton.transform.SetParent(contentPanel);
+        //Add option for password? That'll be weird
+        newServerButton.setServer(networkMatch, netID, levelID);
     }
 }
