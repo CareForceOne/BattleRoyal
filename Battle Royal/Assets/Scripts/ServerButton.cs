@@ -28,7 +28,7 @@ public class ServerButton : MonoBehaviour {
     {
         manager.matchName = "";
         manager.matchSize = 3;
-        manager.matchMaker.JoinMatch(netID, "", callback);
+        manager.matchMaker.JoinMatch(netID, "", manager.OnMatchJoined);
     }
 
     private void callback(JoinMatchResponse response)
