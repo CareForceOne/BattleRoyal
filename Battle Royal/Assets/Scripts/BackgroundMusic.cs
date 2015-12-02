@@ -15,6 +15,15 @@ public class BackgroundMusic : MonoBehaviour {
 
     void Awake()
     {
+        string sceneName = Application.loadedLevelName;
+
+        Debug.Log(sceneName);
+        if (sceneName == "test" || sceneName == "scene3" || sceneName == "scene5")
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+
         if (instance != null && instance != this)
         {
             Destroy(this.gameObject);
