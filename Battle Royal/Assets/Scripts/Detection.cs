@@ -3,10 +3,10 @@ using System.Collections;
 
 public class Detection : MonoBehaviour {
 	
-
+	GameObject killBlock;
 	// Use this for initialization
 	void Start () {
-		
+		killBlock = GameObject.Find ("KillBlock");
 	}
 	
 	// Update is called once per frame
@@ -17,6 +17,8 @@ public class Detection : MonoBehaviour {
 		Debug.Log("even work?");
 
 		if (player.gameObject.tag == "Player") {
+			//gameObject.Find("KillBlock").SendMessage("kill");
+			killBlock.SendMessage("killP");
 			Debug.Log("Should ");
 
 		}
