@@ -8,6 +8,10 @@ public class GameManager : MonoBehaviour {
 	public GameObject manager;
 	//public Camera camera;
 
+	void Start(){
+		manager = GameObject.Find("NetworkManager");
+	}
+
 	public void playerWasKilled(Player player){
 		//camera = Camera.main;
 		//CameraTracking cameraScript = camera.GetComponent<CameraTracking> ();
