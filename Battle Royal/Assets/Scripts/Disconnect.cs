@@ -15,9 +15,10 @@ public class Disconnect : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             manager.StopHost();
+            Destroy(manager.gameObject);
         }
     }
 }
