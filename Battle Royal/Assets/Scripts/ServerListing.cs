@@ -31,28 +31,18 @@ public class ServerSettings {
 public class ServerListing : MonoBehaviour {
 	public GameObject sampleButton;
 	public List<ServerSettings> serverList;
-    NetworkMatch networkMatch;
 
     public Transform contentPanel;
 
-	void Start()
-    {
-        networkMatch.ListMatches(0, 20, "", UpdateListing);
-        //MasterServer.RequestHostList("test");
-    }
-
-    public void OnList(ListMatchResponse matchListResponse)
-    {
-        if (matchListResponse.success)
-        {
-            Debug.Log(matchListResponse.matches.Count);
-        }
-
-    }
+    NetworkManager manager;
 
     void Awake()
     {
-        networkMatch = gameObject.AddComponent<NetworkMatch>();
+        manager = GetComponent<NetworkManager>();
+        manager.StartMatchMaker();
+        manager.SetMatchHost("mm.unet.unity3d.com", 443, true);
+
+        manager.matchMaker.ListMatches(0, 20, "", UpdateListing);
     }
 
     private void UpdateListing(ListMatchResponse matchListResponse)
@@ -79,7 +69,6 @@ public class ServerListing : MonoBehaviour {
         newServerButton.Ping.text = ping.ToString();
 
         newServerButton.transform.SetParent(contentPanel);
-        //Add option for password? That'll be weird
-        newServerButton.setServer(networkMatch, netID);
+        newServerButton.setServer(manager, netID);
     }
 }

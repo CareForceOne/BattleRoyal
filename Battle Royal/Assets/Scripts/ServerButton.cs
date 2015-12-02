@@ -12,25 +12,34 @@ public class ServerButton : MonoBehaviour {
     public Text Players;
     public Text hasPassword;
     public Text Ping;
-
-    private NetworkMatch networkMatch;
+    
+    private NetworkManager manager;
     private NetworkID netID;
-    private string pass;
+    private string password;
 
-    public void setServer(NetworkMatch networkMatch, NetworkID netID, string password = "")
+    public void setServer(NetworkManager manager, NetworkID netID, string password = "")
     {
-        this.networkMatch = networkMatch;
+        this.manager = manager;
         this.netID = netID;
-        this.pass = password;
+        this.password = password;
     }
 
     public void joinServer()
     {
-        networkMatch.JoinMatch(netID, pass, callback);
+        manager.matchName = "";
+        manager.matchSize = 3;
+        manager.matchMaker.JoinMatch(netID, "", callback);
     }
 
     private void callback(JoinMatchResponse response)
     {
-        Debug.Log(response.success);
+        if(response.success)
+        {
+            Debug.Log("What");
+        }
+        else
+        {
+            Debug.Log("Fail");
+        }
     }
 }
