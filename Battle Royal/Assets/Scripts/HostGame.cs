@@ -16,18 +16,15 @@ public class HostGame : MonoBehaviour
     
     NetworkManager manager;
 
-    void Start()
+    void Awake()
     {
-        Dropdown mapDropdown = Map.GetComponent<Dropdown>();      
+        Dropdown mapDropdown = Map.GetComponent<Dropdown>();
         mapDropdown.options.Add(new Dropdown.OptionData("scene1"));
         mapDropdown.options.Add(new Dropdown.OptionData("scene2"));
         mapDropdown.options.Add(new Dropdown.OptionData("scene3"));
         mapDropdown.options.Add(new Dropdown.OptionData("scene4"));
         mapDropdown.options.Add(new Dropdown.OptionData("scene5"));
-    }
 
-    void Awake()
-    {
         manager = GetComponent<NetworkManager>();
         manager.StartMatchMaker();
         manager.SetMatchHost("mm.unet.unity3d.com", 443, true);
