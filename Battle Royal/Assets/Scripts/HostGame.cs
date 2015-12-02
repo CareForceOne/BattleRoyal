@@ -23,80 +23,22 @@ public class HostGame : MonoBehaviour
 
     // Temporary solutions, i don't want to leave this here
     public Dictionary<string, int> maps = new Dictionary<string, int>();
-
-    NetworkMatch networkMatch;
+    
+    NetworkManager manager;
 
     void Start()
     {
         maps.Add("test", 1);
         maps.Add("scene3", 2);
         maps.Add("scene5", 3);
-
-        //bool useNat = !Network.HavePublicAddress();
-        //Network.InitializeServer(32, 25000, useNat);
-    }
-
-    int lastCount = 0;
-    void OnGUI()
-    {
-        if (GUILayout.Button("List rooms"))
-        {
-            GUILayout.Label("Current rooms: " + lastCount);
-            networkMatch.ListMatches(0, 20, "", OnList);
-        }
-    }
-
-    public void OnList(ListMatchResponse matchListResponse)
-    {
-        if (matchListResponse.success)
-        {
-            lastCount = matchListResponse.matches.Count;
-            Debug.Log(matchListResponse.matches.Count);
-        }
-
     }
 
     void Awake()
     {
-        networkMatch = gameObject.AddComponent<NetworkMatch>();
+        manager = GetComponent<NetworkManager>();
+        manager.StartMatchMaker();
+        manager.SetMatchHost("mm.unet.unity3d.com", 443, true);
     }
-
-    // Old attempt, trying something new
-    /*void OnServerInitialized()
-    {
-        //MasterServer.RegisterHost("MyGameVer1.0.0_42", "My Game Instance", "This is a comment and place to store data");
-        MasterServer.RegisterHost("test", "Temp", "Screw descriptions");
-    }
-
-    void OnMasterServerEvent(MasterServerEvent msEvent)
-    {
-        Debug.Log(msEvent);
-        if (msEvent == MasterServerEvent.RegistrationSucceeded)
-        {
-            MasterServer.RequestHostList("test");
-            Debug.Log("Server registered");
-        }
-            
-
-        if (msEvent == MasterServerEvent.HostListReceived)
-        {
-            Debug.Log(MasterServer.PollHostList().Length);
-        }
-
-    }
-
-    void OnFailedToConnectToMasterServer(NetworkConnectionError info)
-    {
-        Debug.Log("Could not connect to master server: " + info);
-    }
-
-    void OnMasterServerEvent(MasterServerEvent msEvent)
-    {
-        Debug.Log(msEvent);
-        if (msEvent == MasterServerEvent.RegistrationSucceeded)
-            Debug.Log("Server registered");
-
-    }*/
 
     int levelID = 0;
     public void Host()
@@ -110,22 +52,7 @@ public class HostGame : MonoBehaviour
             if (levelID == -1)
             { }
 
-            CreateMatchRequest create = new CreateMatchRequest();
-            create.name = ServerName.text;
-            create.size = System.Convert.ToUInt32(MaxPlayers.captionText.text);
-            create.advertise = true;
-            create.password = Password.text;
-
-            Dictionary<string, long> attributes = new Dictionary<string, long>();
-            attributes.Add("scene", levelID);
-            //create.matchAttributes.Add("gamemode", );
-
-            create.matchAttributes = attributes;
-            //create.
-
-            networkMatch.CreateMatch(create, OnMatchCreate);
-
-            //Application.LoadLevel(levelID);
+            manager.matchMaker.CreateMatch(ServerName.text, System.Convert.ToUInt32(MaxPlayers.captionText.text), true, Password.text, manager.OnMatchCreate);
         }
         else
         {
@@ -133,22 +60,6 @@ public class HostGame : MonoBehaviour
             Debug.Log("Unable to host with given input");
         }
     }
-
-    public void OnMatchCreate(CreateMatchResponse matchResponse)
-    {
-        if (matchResponse.success)
-        {
-            Utility.SetAccessTokenForNetwork(matchResponse.networkId, new NetworkAccessToken(matchResponse.accessTokenString));
-            NetworkServer.Listen(new MatchInfo(matchResponse), 9000);
-
-            Application.LoadLevel(levelID);
-        }
-        else
-        {
-            Debug.Log("Create match failed");
-        }
-    }
-
 
     // Make sure all of the public variables are set to something usable
     private bool isValid()

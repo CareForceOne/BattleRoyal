@@ -5,14 +5,22 @@ using System.Collections;
 public class Player : NetworkBehaviour
 {
 
-    public float speed = 5.00f;
+    public float speed = 10.00f;
     float buttonTimer = 0f;
     float DASHTIME = 0f;
+	float swingTimer = 0f;
+	float arrowTimer = 0f;
     float dashCooldownTimer = 0.0f;
     public float DASHCOOLDOWN = 3.0f;
     public float JUMPCOOLDOWN = 0.5f;
+	public float SWINGCOOLDOWN = 0.5f;
+	public float ARROWCOOLDOWN = 0.5f;
     bool facingRight = false;
 	private Animator animator;
+	private AudioSource audio;
+	private AudioClip swing;
+	private AudioClip arrowSound;
+	private AudioClip hitSound;
 	//private NetworkAnimator networkAnimator;
 
 	public delegate void flipDelegate();
@@ -30,6 +38,10 @@ public class Player : NetworkBehaviour
 		//networkAnimator = GetComponent<NetworkAnimator> ();
 		//networkAnimator = gameObject.AddComponent<NetworkAnimator> ();
 		animator = GetComponent<Animator>();
+		audio = GetComponent<AudioSource> ();
+		swing = Resources.Load<AudioClip> ("Sounds/Sword_Swing_3_P");
+		arrowSound = Resources.Load<AudioClip> ("Sounds/Arrow_Whoosh");
+		hitSound = Resources.Load<AudioClip> ("Sounds/Sword_Hit");
 		//networkAnimator.animator = animator;
 		//for (int i = -1; i < animator.parameterCount; i++) {
 			//networkAnimator.SetParameterAutoSend(i, true);
@@ -77,19 +89,16 @@ public class Player : NetworkBehaviour
         }
 		if (Input.GetButtonDown ("Punch")) {
 			//do a sick punch
-			//Debug.Log ("FALCON PUNCH");
-
-			CmdPunch();
+			if(swingTimer <= 0){
+				swingTimer = SWINGCOOLDOWN;
+				CmdPunch();
+			}
 		}
 		if (Input.GetButtonDown ("Shoot")) {
-			/*
-			if(! isServer){
-				GameObject arrow = (GameObject)Instantiate(Resources.Load("Prefabs/Arrow"), new Vector2((transform.position.x - (3 * transform.localScale.x / 10)), transform.position.y), transform.rotation);
-				Destroy (arrow, 2.0f);
-				arrow.GetComponent<Rigidbody2D>().AddForce(new Vector2(-(400 * transform.localScale.x),0));
+			if(arrowTimer <= 0){
+				arrowTimer = ARROWCOOLDOWN;
+				CmdShoot();
 			}
-			*/
-			CmdShoot();
 		}
     }
 
@@ -107,11 +116,14 @@ public class Player : NetworkBehaviour
     }
 
 	public void takeDamage(int damage){
+
+		audio.PlayOneShot(hitSound, 1);
 		if (!isServer) {
 			return;
 		}
 
 		health -= damage;
+
 	}
 	
 
@@ -142,8 +154,14 @@ public class Player : NetworkBehaviour
         }
         if (DASHTIME <= 0)
         {
-            speed = 5.00f;
+            speed = 10.00f;
         }
+		if(swingTimer > 0 ){
+			swingTimer -= Time.deltaTime;
+		}
+		if (arrowTimer > 0) {
+			arrowTimer -= Time.deltaTime;
+		}
     }
     [Command]
     void Cmdflip(){
@@ -165,6 +183,7 @@ public class Player : NetworkBehaviour
 
 	[Command]
 	void CmdShoot(){
+		audio.PlayOneShot(arrowSound, 1);
 		GameObject arrow = (GameObject)Instantiate(Resources.Load("Prefabs/Arrow"), new Vector2((transform.position.x - (3 * transform.localScale.x / 10)), transform.position.y), transform.rotation);
 		Vector3 theScale = transform.localScale / 10;
 		theScale.x *= -1;
@@ -175,6 +194,7 @@ public class Player : NetworkBehaviour
 	}
 	[ClientRpc]
 	void RpcPunch(){
+		audio.PlayOneShot(swing, 1);
 		animator.SetTrigger("punch");
 	}
 }
